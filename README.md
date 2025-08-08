@@ -9,7 +9,7 @@
 
 ## Putting Them Both Together
 
-1. [Simple 2D Scene](https://github.com/ART-3364-Interactive-Storytelling/Tutorials/blob/main/Simple%202D%20Scene.md) - A first introduction into creating a 2D Unity project and animating a simple shape across the screen.
+1. [Simple 2D Scene](https://github.com/ART-3364-Interactive-Storytelling/Simple-2D-Scene) - A first introduction into creating a 2D Unity project and animating a simple shape across the screen.
 2. [Simple UFO](https://github.com/ART-3364-Interactive-Storytelling/Tutorials/blob/main/Simple%202D%20UFO.md) - Building on the first tutorial we add a background sprite, a ufo sprite and a farm.  We animate the UFO movement with a C# script.
 
 
