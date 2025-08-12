@@ -42,7 +42,7 @@ Access modifiers are used to control the accessibility of classes, methods, prop
 
 ### Public
 *   **Definition**: The `public` access modifier makes a member accessible from any part of the program.
-*   **Description**: When a member is declared as `public`, it can be accessed from any class, regardless of whether it's in the same assembly[^1] or not.
+*   **Description**: When a member is declared as `public`, it can be accessed from any class, regardless of whether it's in the same [assembly](CSharp_Assembly.md)[^1] or not.
 *   **Example**:
 ```csharp
 public class MyClass 
@@ -57,7 +57,7 @@ In this example, `MyMethod` can be called from any class in the program.
 
 ### Private
 *   **Definition**: The `private` access modifier makes a member accessible only within the same class.
-*   **Description**: When a member is declared as `private`, it can only be accessed within the class where it's declared. This means that other classes, even if they're in the same assembly, cannot access the member directly.
+*   **Description**: When a member is declared as `private`, it can only be accessed within the class where it's declared. This means that other classes, even if they're in the same [assembly](CSharp_Assembly.md), cannot access the member directly.
 *   **Example**:
 ```csharp
 public class MyClass 
@@ -99,8 +99,8 @@ public class MyDerivedClass : MyBaseClass
 In this example, `MyMethod` can be called from within `MyBaseClass` and `MyDerivedClass`.
 
 ### Internal
-*   **Definition**: The `internal` access modifier makes a member accessible only within the same assembly.
-*   **Description**: When a member is declared as `internal`, it can be accessed from any class within the same assembly, but not from classes in other assemblies.
+*   **Definition**: The `internal` access modifier makes a member accessible only within the same [assembly](CSharp_Assembly.md).
+*   **Description**: When a member is declared as `internal`, it can be accessed from any class within the same [assembly](CSharp_Assembly.md), but not from classes in other assemblies.
 *   **Example**:
 ```csharp
 internal class MyClass 
@@ -111,7 +111,7 @@ internal class MyClass
     }
 }
 ```
-In this example, `MyClass` and `MyMethod` can only be accessed from within the same assembly.
+In this example, `MyClass` and `MyMethod` can only be accessed from within the same [assembly](CSharp_Assembly.md).
 
 ### Comparison of Access Modifiers
 | Access Modifier | Same Class | Same Assembly | Different Assembly | Inherited Classes |
@@ -119,9 +119,9 @@ In this example, `MyClass` and `MyMethod` can only be accessed from within the s
 | `public` | Yes | Yes | Yes | Yes |
 | `private` | Yes | No | No | No |
 | `protected` | Yes | Yes | No | Yes |
-| `internal` | Yes | Yes | No | Yes (if inherited within same assembly) |
+| `internal` | Yes | Yes | No | Yes (if inherited within same [assembly](CSharp_Assembly.md)) |
 
-Note that the `internal` access modifier can be combined with `protected` to create `protected internal`, which allows access from the same assembly and from inherited classes in the same assembly.
+Note that the `internal` access modifier can be combined with `protected` to create `protected internal`, which allows access from the same [assembly](CSharp_Assembly.md) and from inherited classes in the same [assembly](CSharp_Assembly.md).
 
 ## Example Class
 Here's an example of a simple `Person` class in C#:
@@ -172,5 +172,5 @@ class Program
 ```
 This code creates a new `Person` object named `person` and calls the `SayHello` method to print a greeting message to the console.
 
-[^1]: An assembly in C# is a compiled collection of code, data, and metadata that forms a single unit of deployment and reuse. Assemblies are the building blocks of .NET applications and can contain one or more files, such as DLLs (dynamic-link libraries) or EXEs (executables).  Assemblies can be thought of as containers that hold the compiled code, resources, and metadata for a .NET application. They provide a way to package
+[^1]: An [assembly](CSharp_Assembly.md) in C# is a compiled collection of code, data, and metadata that forms a single unit of deployment and reuse. Assemblies are the building blocks of .NET applications and can contain one or more files, such as DLLs (dynamic-link libraries) or EXEs (executables).  Assemblies can be thought of as containers that hold the compiled code, resources, and metadata for a .NET application. They provide a way to package
 
