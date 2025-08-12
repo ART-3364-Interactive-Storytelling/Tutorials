@@ -4,7 +4,7 @@ C# methods are blocks of code that can be called multiple times from different p
 ## Pass by Value
 ----------------
 
-When passing an argument to a method by value, a copy of the original value is passed to the method. Any changes made to the argument within the method ~~do not affect the original value~~.
+When passing an argument to a method by value, a copy of the original value is passed to the method. Any changes made to the argument within the method **do not affect the original value**.
 
 ```csharp
 public class MyClass
