@@ -39,6 +39,15 @@ Scenes often represent **discrete application states**:
 
 ## Scene Management
 
+### Scene Loading Modes
+
+Unity provides several scene loading modes, including:
+
+* **Single**: This mode loads a single scene and unloads all other scenes.
+* **Additive**: This mode loads a new scene and adds it to the current scene.
+* **Additive (without unloading)**: This mode loads a new scene and adds it to the current scene, without unloading any scenes.
+
+
 ### Loading Scenes
 
 Scenes are loaded via the `SceneManager` API in the `UnityEngine.SceneManagement` namespace.
@@ -57,6 +66,23 @@ SceneManager.LoadScene("UIOverlay", LoadSceneMode.Additive);
 ```
 
 This loads UIOverlay on top of the currently loaded scene. Additive scenes are useful for persistent UIs, streaming level sections, or modular scene composition.
+
+#### Scene Unloading
+
+To unload a scene in Unity, you can use the **SceneManager** class. Here is an example of how to unload a scene:
+```csharp
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class SceneUnloader : MonoBehaviour
+{
+    public void UnloadScene(string sceneName)
+    {
+        SceneManager.UnloadScene(sceneName);
+    }
+}
+```
+
 
 #### Build Settings
 Before you can load a scene in code, it must be added to:
@@ -111,5 +137,13 @@ Unity Scenes are:
 * Editable in the Unity Editor
 * Loadable via script at runtime (single or additive)
 
-They are a critical building block for any Unity-based game or application.
+
+## Further Reading
+
+For more information on Unity scenes, check out the following resources:
+
+* [Unity Documentation: Scenes](https://docs.unity3d.com/Manual/Scenes.html)
+* [Unity Documentation: SceneManager](https://docs.unity3d.com/ScriptReference/SceneManagement.SceneManager.html)
+* [Unity Tutorial: Scene Management](https://unity3d.com/learn/tutorials/topics/interface-essentials/scene-management)
+
 
