@@ -1,6 +1,6 @@
-Implementing a UI with Buttons in Unity: Switching Scenes
+# Implementing a UI with Buttons in Unity: Switching Scenes
 
-# Introduction
+## Introduction
 
 Unity is a powerful game engine that provides a wide range of tools and features for creating interactive applications. In this tutorial, we will cover the basics of implementing a UI with buttons in Unity, and then take it a step further by using the button to switch between scenes.
 
