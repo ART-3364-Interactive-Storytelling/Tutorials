@@ -40,3 +40,28 @@ Add Page_Three. Create the same setup, and repeat the above steps in order to wo
 You can use this process to similarly make a 'Back' button on pages, create a Title and/or Credits page at the beginning and end, etc.
 
 If you do not want to have a button that says 'Next" you can remove the TextMeshPro/leave the textbox blank and replace the button sprite with one of your own. (i.e. an arrow, a round button, etc)
+
+## Troubleshooting
+
+First and foremost, your PAGES should be the outmost ```gameObjects``` in your hierarchy.
+
+* Page_One
+  *  Image
+  *  Text
+  *  Button
+* Page_Two
+  *  Image
+  *  Text
+  *  Button
+
+ Then remember to use those gameObjects that are furthest out and contain BOTH your background and next button as children at equal levels for your ```onClick``` functions. Common errors incude turning on and off your images alone which will not work!
+
+ If you are having issues with pages not turning on and off, make sure you have:
+ * Checked off all ```gameOjbect``` Pages except for Page 1 in the inspector
+
+Turning off each individual UI object within your Page (Image, Text, Button) in the Inspector will cause these elements to not be turned on when the Page ```gameObject``` is turned on. 
+
+To relink these, you need to:
+* Turn on Page_Two and all its elements manually (checkbox in inspector, NOT the eye icon in hierarchy)
+* ONLY turn off Page_Two ```gameObject``` - every child linked to this object will turn off as well
+* Ensure your ```onClick()``` function turns ON the Page_Two ```gameObject``` and OFF the Page_One ```gameObject```
